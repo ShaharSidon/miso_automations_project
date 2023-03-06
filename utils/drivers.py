@@ -9,7 +9,7 @@ from selenium.webdriver.common.by import By
 class ChromeDriver:
 
     def __init__(self):
-        chromedriver_path = "chromedriver.exe"
+        chromedriver_path = "./chromedriver.exe"
         self.service = Service(executable_path=chromedriver_path)
 
     def get_chrome_driver(self):
