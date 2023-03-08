@@ -61,3 +61,9 @@ class HomepageElements:
 
         return next_element
 
+    def find_category_text(self):
+        category_text = WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.XPATH,
+                                                                                       '/html/body/div[5]/div/div[1]/div/a[1]')))
+
+        return category_text
+
