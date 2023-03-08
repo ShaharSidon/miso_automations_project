@@ -1,7 +1,10 @@
 import unittest
+from selenium.webdriver.chrome.service import Service
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from utils.drivers import ChromeDriver
 
 
 class TestOrangeHrmLoginPage(unittest.TestCase):
@@ -11,7 +14,9 @@ class TestOrangeHrmLoginPage(unittest.TestCase):
             self.service = Service(executable_path=chromedriver_path)
             chrome_options = webdriver.ChromeOptions()
             chrome_options.add_argument("--disable-extensions")
-            self.chrome_driver = webdriver.Chrome(options=chrome_options)
+            # self.chrome_driver = webdriver.Chrome(options=chrome_options)
+            driver = ChromeDriver()
+            self.chrome_driver = driver.get_chrome_driver()
         except AssertionError:
             self.chrome_driver.quit()
 
@@ -38,10 +43,6 @@ class TestOrangeHrmLoginPage(unittest.TestCase):
         assert self.chrome_driver.current_url == 'https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/' \
                                                  'index'
 
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 
 # Set up the Chrome driver and navigate to the login page
 driver = webdriver.Chrome()
@@ -57,11 +58,12 @@ submit_button.click()
 
 # Wait for the dashboard to load and verify that the page title contains "Dashboard"
 dashboard_title = WebDriverWait(driver, 10).until(
-    EC.presence_of_element_located((By.XPATH, "//h1[contains(text(), 'Dashboard')]"))
-)
+    EC.presence_of_element_located((By.XPATH, "//h1[contains(text(), 'Dashboard')]")))
 assert "Dashboard" in driver.title
+
 
 # Close the browser window
 driver.quit()
 
 # poleg was here
+
