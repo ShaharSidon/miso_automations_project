@@ -19,42 +19,42 @@ class HomepageElements:
 
         return right_element
 
-    # find phones button in category
+    # find "phones" button in category
     def find_category_phones_button(self):
         phone_element = WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.XPATH,
                                                                                       '/html/body/div[5]/div/div[1]/div/a[2]')))
 
         return phone_element
 
-    # find laptops button in category
+    # find "laptops" button in category
     def find_category_laptops_button(self):
         laptops_element = WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.XPATH,
                                                                                         '/html/body/div[5]/div/div[1]/div/a[3]')))
 
         return laptops_element
 
-    # monitors button in category
+    # find "monitors" button in category
     def find_category_monitors_button(self):
         monitors_element = WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.XPATH,
                                                                                          '/html/body/div[5]/div/div[1]/div/a[4]')))
 
         return monitors_element
 
-    # find item button text link
+    # find samsung specific item button text link
     def find_item_samsung_galaxy_s6(self):
         samsung_element = WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.XPATH,
                                                                                         '/html/body/div[5]/div/div[2]/div/div[1]/div/div/h4/a')))
 
         return samsung_element
 
-    # "previous" button
+    # find "previous" button at the end of the homepage
     def find_previous_button(self):
         previous_element = WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.XPATH,
                                                                                          '/html/body/div[5]/div/div[2]/form/ul/li[1]/button')))
 
         return previous_element
 
-    # "next" button
+    # find "next" button at the end of the homepage
     def find_next_button(self):
         next_element = WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.XPATH,
                                                                                       '/html/body/div[5]/div/div[2]/form/ul/li[2]/button')))
