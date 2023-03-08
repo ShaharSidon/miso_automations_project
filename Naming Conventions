@@ -1,0 +1,15 @@
+Utils:
+•	File names must be in the following format:
+<relevant page name>_<what’s contained inside (for example Locators)>
+•	Class name must be descriptive
+•	Class name must follow CamelCase convention
+•	Class name should describe what utils are inside
+•	Method names should be formatted as actions
+Tests:
+•	File names must be in the following format:
+<relevant page name>_<name of the test suite (for example Login)>
+•	Class name must be descriptive
+•	Class name must follow CamelCase convention
+•	Class name should describe what test cases are inside
+•	Method names must be in the following format:
+test_<the number of the test according to running order>_<test name>_<valid/invalid>
