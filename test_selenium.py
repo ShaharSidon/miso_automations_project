@@ -63,3 +63,5 @@ assert "Dashboard" in driver.title
 
 # Close the browser window
 driver.quit()
+
+# poleg was here
