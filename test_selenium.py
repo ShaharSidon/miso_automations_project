@@ -61,5 +61,9 @@ dashboard_title = WebDriverWait(driver, 10).until(
     EC.presence_of_element_located((By.XPATH, "//h1[contains(text(), 'Dashboard')]")))
 assert "Dashboard" in driver.title
 
-Close the browser window
+
+# Close the browser window
 driver.quit()
+
+# poleg was here
+
