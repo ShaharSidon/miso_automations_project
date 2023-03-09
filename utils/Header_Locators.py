@@ -270,11 +270,3 @@ class HeaderElements:
         element = WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.ID, "logout2")))
 
         return element
-
-
-locators = HeaderElements()
-driver.get("https://www.demoblaze.com/index.html")
-driver.maximize_window()
-click = locators.pressing_about_us_button()
-click.click()
-EC.element_to_be_clickable(locators.pressing_about_us_close_button())
