@@ -40,13 +40,13 @@ class HomepageElements:
     # monitor category image
     def find_category_monitors_image(self):
         monitors_element = WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.XPATH,
-                                                                                         '/html/body/div[5]/div/div[2]/div/div[1]/div/a/img')))
+                                                                                         '/html/body/div[5]/div/div[2]/div/div[2]/div/a/img')))
         return monitors_element
 
     # find "laptops" button in category
     def find_category_laptops_button(self):
         laptops_element = WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.XPATH,
-                                                                                        '/html/body/div[5]/div/div[1]/div/a[3]')))
+                                                                                        '/html/body/div[5]/div/div[2]/div/div[2]/div/a/img')))
 
         return laptops_element
 
@@ -133,3 +133,4 @@ class HomepageElements:
                                                                                        '/html/body/div[5]/div/div[2]/div[2]/div/a')))
 
         return add_element
+
