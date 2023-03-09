@@ -69,14 +69,6 @@ class HeaderElements:
 
         return element
 
-    # find the contact email text title
-    def find_contact_email(self):
-        element = WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.XPATH, "/html/body/div["
-                                                                                           "1]/div/div/div["
-                                                                                           "2]/form/div[1]/label")))
-
-        return element
-
     # find the new message title text
     def find_new_message_title(self):
         element = WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.ID, "exampleModalLabel")))
@@ -141,10 +133,10 @@ class HeaderElements:
 
     # playing the video in the about us section
     def press_play_button_in_about_us(self):
-        element = WebDriverWait(driver, 3).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "#example-video > "
-                                                                                              "button > "
-                                                                                              "span.vjs-icon"
-                                                                                              "-placeholder")))
+        element = WebDriverWait(driver, 3).until(EC.element_to_be_clickable((By.XPATH, "/html/body/div["
+                                                                                       "4]/div/div/div["
+                                                                                       "2]/form/div/div/button/span["
+                                                                                       "1]")))
         return element
 
     # pressing the close button in the about us section
@@ -156,13 +148,18 @@ class HeaderElements:
 
     # pressing Cart button
     def pressing_cart_button(self):
-        element = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "/html/body/nav/div["
-                                                                                            "1]/ul/li[4]/a")))
+        element = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "#videoModal > div "
+                                                                                                   "> div > "
+                                                                                                   "div.modal-footer "
+                                                                                                   "> button")))
 
         return element
+
     # Bug has been found - cannot click the button or locate from certain URL
 
-    # find the products title in the cart section
+    # find the products title in the cart section,
+    # "Uncaught ReferenceError: showcart is not defined at HTMLAnchorElement.onclick (cart.html:716:63)
+    # onclick @ cart.html:716"
     def find_products_title_cart(self):
         element = WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.CSS_SELECTOR, "#page-wrapper > "
                                                                                                   "div > div.col-lg-8"
@@ -197,6 +194,7 @@ class HeaderElements:
                                                                                                   "th:nth-child(2)")))
 
         return element
+
     # find the price text in the cart section
 
     def find_price_text_cart(self):
@@ -207,8 +205,6 @@ class HeaderElements:
                                                                                                   "th:nth-child(3)")))
 
         return element
-
-
 
     # pressing the cart place order button
     def pressing_cart_place_order_button(self):
@@ -276,4 +272,6 @@ class HeaderElements:
         element = WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.ID, "logout2")))
 
         return element
+
+
 
