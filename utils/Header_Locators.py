@@ -126,23 +126,21 @@ class HeaderElements:
 
     # finding the video in the about us section
     def finding_about_us_video(self):
-        element = WebDriverWait(driver, 3).until(
-            EC.presence_of_element_located((By.CSS_SELECTOR, "#example-video > div.vjs-poster")))
+        element = WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.CSS_SELECTOR, "#example-video > "
+                                                                                                  "div.vjs-poster")))
 
         return element
 
     # playing the video in the about us section
     def press_play_button_in_about_us(self):
-        element = WebDriverWait(driver, 3).until(EC.element_to_be_clickable((By.XPATH, "/html/body/div["
-                                                                                       "4]/div/div/div["
-                                                                                       "2]/form/div/div/button/span["
-                                                                                       "1]")))
+        element = WebDriverWait(driver, 3).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "#example-video > "
+                                                                                              "button")))
         return element
 
     # pressing the close button in the about us section
     def pressing_about_us_close_button(self):
         element = WebDriverWait(driver, 3).until(
-            EC.element_to_be_clickable((By.XPATH, "/html/body/div[5]/div/div/div[3]/button")))
+            EC.element_to_be_clickable((By.CSS_SELECTOR, "#videoModal > div > div > div.modal-footer > button")))
 
         return element
 
@@ -274,4 +272,9 @@ class HeaderElements:
         return element
 
 
-
+locators = HeaderElements()
+driver.get("https://www.demoblaze.com/index.html")
+driver.maximize_window()
+click = locators.pressing_about_us_button()
+click.click()
+EC.element_to_be_clickable(locators.pressing_about_us_close_button())
