@@ -23,13 +23,18 @@ class HomepageElements:
     def find_category_phones_button(self):
         phone_element = WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.XPATH,
                                                                                       '/html/body/div[5]/div/div[1]/div/a[2]')))
-
         return phone_element
+
+    # monitor category image
+    def find_category_image(self):
+        image_element = WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.XPATH,
+                                                                                         '/html/body/div[5]/div/div[2]/div/div[2]/div/a/img')))
+        return image_element
 
     # find "laptops" button in category
     def find_category_laptops_button(self):
         laptops_element = WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.XPATH,
-                                                                                        '/html/body/div[5]/div/div[1]/div/a[3]')))
+                                                                                        '/html/body/div[5]/div/div[2]/div/div[2]/div/a/img')))
 
         return laptops_element
 
@@ -65,6 +70,31 @@ class HomepageElements:
     def find_category_text(self):
         category_text = WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.XPATH,
                                                                                        '/html/body/div[5]/div/div[1]/div/a[1]')))
-
         return category_text
+
+    # find text price
+    def find_category_item_text_price(self):
+        category_text = WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.XPATH,
+                                                                                       '/html/body/div[5]/div/div[2]/div/div[1]/div/div/p')))
+        return category_text
+
+
+    # find item description text in category
+    def find_category_item_text_description(self):
+        category_element = WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.XPATH,
+                                                                                       '/html/body/div[5]/div/div[2]/div/div[2]/div/div/p')))
+        return category_element
+
+    # find category item text link
+    def find_category_item_link_text(self):
+        category_element = WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.XPATH,
+                                                                                       '/html/body/div[5]/div/div[2]/div/div[1]/div/div/h4/a')))
+        return category_element
+
+    # add item to cart button
+    def find_items_add_to_cart(self):
+        add_element = WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.XPATH,
+                                                                                       '/html/body/div[5]/div/div[2]/div[2]/div/a')))
+
+        return add_element
 
