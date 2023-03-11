@@ -61,6 +61,16 @@ class HeaderElements:
 
         return element
 
+    # finding the contact name title text
+    def find_contact_name_title(self):
+        element = WebDriverWait(self.driver, 3).until(EC.presence_of_element_located((By.XPATH, '//*['
+                                                                                                '@id="exampleModal'
+                                                                                                '"]/div/div/div['
+                                                                                                '2]/form/div['
+                                                                                                '2]/label')))
+
+        return element
+
     # find the " message title text"
     def find_message_title(self):
         element = WebDriverWait(self.driver, 3).until(EC.presence_of_element_located((By.XPATH, "/html/body/div["
@@ -101,7 +111,7 @@ class HeaderElements:
         return element
 
     # pressing the "send message"
-    def _pressing_send_contact_message(self):
+    def pressing_send_contact_message(self):
         element = WebDriverWait(self.driver, 3).until(EC.presence_of_element_located((By.XPATH, "/html/body/div["
                                                                                            "1]/div/div/div[3]/button["
                                                                                            "2]")))
@@ -250,6 +260,11 @@ class HeaderElements:
 
     def find_logo_left_top_bar(self):
         element = WebDriverWait(self.driver, 3).until(EC.presence_of_element_located((By.XPATH, "/html/body/nav/a/img")))
+
+        return element
+
+    def find_store_name_left_top_bar(self):
+        element = WebDriverWait(self.driver, 3).until(EC.presence_of_element_located((By.XPATH, '//*[@id="nava"]')))
 
         return element
 
