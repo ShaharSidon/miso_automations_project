@@ -78,7 +78,7 @@ class UITextTesting(unittest.TestCase):
         assert picture == "https://www.demoblaze.com/bm.png"
 
     # the start of the eighth test:
-    def test_8_Sign_up_button_text(self):
+    def test_8_store_name_text(self):
         # finding the store name and extracting the text from it
         text = self.locator.find_store_name_left_top_bar()
         test_text = text.get_attribute("innerText")
