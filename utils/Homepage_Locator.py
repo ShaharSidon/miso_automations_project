@@ -23,7 +23,7 @@ class HomepageElements:
     # find "phones" button in category
     def find_category_phones_button(self):
         phone_element = WebDriverWait(self.driver, 3).until(EC.presence_of_element_located((By.XPATH,
-                                                                                      '/html/body/div[5]/div/div[1]/div/a[2]')))
+                                                                                            '/html/body/div[5]/div/div[1]/div/a[2]')))
         return phone_element
 
     # monitor category image
@@ -35,14 +35,14 @@ class HomepageElements:
     # find "laptops" button in category
     def find_category_laptops_button(self):
         laptops_element = WebDriverWait(self.driver, 3).until(EC.presence_of_element_located((By.XPATH,
-                                                                                        '/html/body/div[5]/div/div[2]/div/div[2]/div/a/img')))
+                                                                                              '/html/body/div[5]/div/div[1]/div/a[3]')))
 
         return laptops_element
 
     # find "monitors" button in category
     def find_category_monitors_button(self):
         monitors_element = WebDriverWait(self.driver, 3).until(EC.presence_of_element_located((By.XPATH,
-                                                                                         '/html/body/div[5]/div/div[1]/div/a[4]')))
+                                                                                               '/html/body/div[5]/div/div[1]/div/a[4]')))
 
         return monitors_element
 
@@ -89,7 +89,9 @@ class HomepageElements:
     # find category item text link
     def find_category_item_link_text(self):
         category_element = WebDriverWait(self.driver, 3).until(EC.presence_of_element_located((By.XPATH,
-                                                                                       '/html/body/div[5]/div/div[2]/div/div[1]/div/div/h4/a')))
+                                                                                               '/html/body/div[5]/div/'
+                                                                                               'div[2]/div/div[1]/div/'
+                                                                                               'div/h4')))
         return category_element
 
     # add item to cart button

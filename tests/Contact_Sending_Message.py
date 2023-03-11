@@ -14,7 +14,7 @@ class SendingAMessageTest(unittest.TestCase):
         self.driver.maximize_window()
         self.locator = HeaderElements(self.driver)
 
-    # attempt to do the following actions
+    # creating the teardown for the tests
     def tearDown(self) -> None:
         self.driver.quit()
 
@@ -35,7 +35,7 @@ class SendingAMessageTest(unittest.TestCase):
                                   "Leader of the Illuminen Alliance and the protection of the known universe from the "
                                   "dreaded Swarm is his responsibility.")
         # pressing the button and sending the message
-        second_button = self.locator._pressing_send_contact_message()
+        second_button = self.locator.pressing_send_contact_message()
         second_button.click()
         # asserting that we got the right message
         assert self.driver.switch_to.alert.text == "Thanks for the message!!"
@@ -57,7 +57,7 @@ class SendingAMessageTest(unittest.TestCase):
                                   "Leader of the Illuminen Alliance and the protection of the known universe from the "
                                   "dreaded Swarm is his responsibility.")
         # pressing the button and sending the message
-        second_button = self.locator._pressing_send_contact_message()
+        second_button = self.locator.pressing_send_contact_message()
         second_button.click()
         # asserting that we got the right message
         assert self.driver.switch_to.alert.text != "Thanks for the message!!"
@@ -79,7 +79,7 @@ class SendingAMessageTest(unittest.TestCase):
                                   "Leader of the Illuminen Alliance and the protection of the known universe from the "
                                   "dreaded Swarm is his responsibility.")
         # pressing the button and sending the message
-        second_button = self.locator._pressing_send_contact_message()
+        second_button = self.locator.pressing_send_contact_message()
         second_button.click()
         # asserting that we got the right message
         assert self.driver.switch_to.alert.text != "Thanks for the message!!"
@@ -101,7 +101,7 @@ class SendingAMessageTest(unittest.TestCase):
                                   "Leader of the Illuminen Alliance and the protection of the known universe from the "
                                   "dreaded Swarm is his responsibility."*3)
         # pressing the button and sending the message
-        second_button = self.locator._pressing_send_contact_message()
+        second_button = self.locator.pressing_send_contact_message()
         second_button.click()
         # asserting that we got the right message
         assert self.driver.switch_to.alert.text != "Thanks for the message!!"
