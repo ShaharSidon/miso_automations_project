@@ -20,6 +20,7 @@ class PurchasingAnItem(unittest.TestCase):
         print("Test 1 completed")
 
     def test_1_purcahse_single_item(self):
+        # locating the 'Phones' category, add an item to the cart and purchase
         self.driver.get("https://www.demoblaze.com/")
         phones_cat = self.driver.find_element(By.CSS_SELECTOR, "#itemc")
         phones_cat.click()
@@ -51,10 +52,12 @@ class PurchasingMultipleItems(unittest.TestCase):
         self.driver.maximize_window()
 
     def tearDown(self):
+        # closing the browser window and printing a message
         self.driver.quit()
         print("Test 2 completed")
 
     def test_2_purchasing_multiple_items(self):
+        # navigating to the site, clicking the 'Phones' category, adding multiple items to the cart purchasing.
         self.driver.get("https://www.demoblaze.com/")
         phones_cat = self.driver.find_element(By.CSS_SELECTOR, "#itemc")
         phones_cat.click()

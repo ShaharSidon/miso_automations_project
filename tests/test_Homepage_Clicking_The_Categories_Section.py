@@ -7,6 +7,7 @@ import time
 class TestDemoBlaze(unittest.TestCase):
     # TS 51 Verifying that when clicking the categories button it leads to desired page
     def setUp(self):
+        # setup function to initialize the webdriver and open the target webpage
         self.driver = webdriver.Chrome()
         self.driver.get("https://www.demoblaze.com/index.html")
 

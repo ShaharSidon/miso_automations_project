@@ -18,6 +18,7 @@ class AddingSamsungToCart(unittest.TestCase):
         print("Test 1 completed")
 
     def test_1_add_sumsungs6_to_cart(self):
+        # clicking the 'Phones' category and adding the desired item to the cart
         self.driver.get("https://www.demoblaze.com/")
         phones_cat = self.driver.find_element(By.CSS_SELECTOR, "#itemc")
         phones_cat.click()
@@ -43,6 +44,7 @@ class AddingNokiaToCart(unittest.TestCase):
         print("Test 2 completed")
 
     def test_2_add_nokia_to_cart(self):
+        # clicking the 'Phones' category and adding the desired item to the cart
         self.driver.get("https://www.demoblaze.com/")
         phones_cat = self.driver.find_element(By.CSS_SELECTOR, "#itemc")
         phones_cat.click()
@@ -68,6 +70,7 @@ class AddingNexusToCart(unittest.TestCase):
         print("Test 3 completed")
 
     def test_3_add_nexus_to_cart(self):
+        # clicking the 'Phones' category and adding the desired item to the cart
         self.driver.get("https://www.demoblaze.com/")
         phones_cat = self.driver.find_element(By.CSS_SELECTOR, "#itemc")
         phones_cat.click()
@@ -93,6 +96,7 @@ class AddingGalaxyS7ToCart(unittest.TestCase):
         print("Test 4 completed")
 
     def test_4_add_sumsungs7_to_cart(self):
+        # clicking the 'Phones' category and adding the desired item to the cart
         self.driver.get("https://www.demoblaze.com/")
         phones_cat = self.driver.find_element(By.CSS_SELECTOR, "#itemc")
         phones_cat.click()
@@ -118,6 +122,7 @@ class AddingIphone6ToCart(unittest.TestCase):
         print("Test 5 completed")
 
     def test_5_add_iphone_to_cart(self):
+        # clicking the 'Phones' category and adding the desired item to the cart
         self.driver.get("https://www.demoblaze.com/")
         phones_cat = self.driver.find_element(By.CSS_SELECTOR, "#itemc")
         phones_cat.click()
@@ -143,6 +148,7 @@ class AddingSonyXperiaToCart(unittest.TestCase):
         print("Test 6 completed")
 
     def test_6_add_sony_to_cart(self):
+        # clicking the 'Phones' category and adding the desired item to the cart
         self.driver.get("https://www.demoblaze.com/")
         phones_cat = self.driver.find_element(By.CSS_SELECTOR, "#itemc")
         phones_cat.click()
@@ -168,6 +174,7 @@ class AddingHtcOneM9ToCart(unittest.TestCase):
         print("Test 7 completed")
 
     def test_7_add_htc_to_cart(self):
+        # clicking the 'Phones' category and adding the desired item to the cart
         self.driver.get("https://www.demoblaze.com/")
         phones_cat = self.driver.find_element(By.CSS_SELECTOR, "#itemc")
         phones_cat.click()

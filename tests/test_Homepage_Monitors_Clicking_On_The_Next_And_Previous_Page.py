@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 
 
 class ClickTheLaptopsNextPage(unittest.TestCase):
-    # TS 49 Clicking the next page button in the monitors section
+    # Test Suite 49: Clicking the next page button in the monitors section
     def setUp(self):
         self.driver = webdriver.Chrome()
         self.driver.get("https://www.demoblaze.com/index.html")
@@ -22,13 +22,12 @@ class ClickTheLaptopsNextPage(unittest.TestCase):
 
         self.assertIn(expected_page, laptop_page)
 
-
 if __name__ == '__main__':
     unittest.main()
 
 
 class TestDemoBlaze(unittest.TestCase):
-    # TS 50 clicking the previous page button in the monitors section
+    # Test Suite 50: Clicking the previous page button in the monitors section
 
     def setUp(self):
         self.driver = webdriver.Chrome()

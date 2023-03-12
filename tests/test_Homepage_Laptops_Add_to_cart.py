@@ -9,6 +9,7 @@ class AddingSonyVaioI5ToCart(unittest.TestCase):
     # TS39- Adding Sony Vaio i5 to cart
 
     def setUp(self):
+        # setup function to initialize the webdriver and open the target webpage
         tempdriver = ChromeDriver()
         self.driver = tempdriver.get_chrome_driver()
         self.driver.implicitly_wait(10)
@@ -19,6 +20,7 @@ class AddingSonyVaioI5ToCart(unittest.TestCase):
         print("Test 1  completed")
 
     def test_1_add_sony_vaio_i5_to_cart(self):
+        # locating the laptops category and adding the desired item to the cart
         self.driver.get("https://www.demoblaze.com/")
         laptops_cat = self.driver.find_element(By.XPATH, "/html/body/div[5]/div/div[1]/div/a[3]")
         laptops_cat.click()
@@ -45,6 +47,7 @@ class AddingSonyVaioI7ToCart(unittest.TestCase):
         print("Test 2  completed")
 
     def test_2_add_sony_vaio_i7_to_cart(self):
+        # locating the laptops category and adding the desired item to the cart
         self.driver.get("https://www.demoblaze.com/")
         laptops_cat = self.driver.find_element(By.XPATH, "/html/body/div[5]/div/div[1]/div/a[3]")
         laptops_cat.click()
@@ -71,6 +74,7 @@ class AddingMacBookAirToCart(unittest.TestCase):
         print("Test 3  completed")
 
     def test_3_add_mac_book_air_to_cart(self):
+        # locating the laptops category and adding the desired item to the cart
         self.driver.get("https://www.demoblaze.com/")
         laptops_cat = self.driver.find_element(By.XPATH, "/html/body/div[5]/div/div[1]/div/a[3]")
         laptops_cat.click()
@@ -97,6 +101,7 @@ class AddingDellI78GbToCart(unittest.TestCase):
         print("Test 4  completed")
 
     def test_4_add_dell_i7_8gb_to_cart(self):
+        # locating the laptops category and adding the desired item to the cart
         self.driver.get("https://www.demoblaze.com/")
         laptops_cat = self.driver.find_element(By.XPATH, "/html/body/div[5]/div/div[1]/div/a[3]")
         laptops_cat.click()
@@ -123,6 +128,7 @@ class Adding2017DellToCart(unittest.TestCase):
         print("Test 5  completed")
 
     def test_5_add_dell_15_6_inch_to_cart(self):
+        # locating the laptops category and adding the desired item to the cart
         self.driver.get("https://www.demoblaze.com/")
         laptops_cat = self.driver.find_element(By.XPATH, "/html/body/div[5]/div/div[1]/div/a[3]")
         laptops_cat.click()
@@ -149,6 +155,7 @@ class AddingMacBookProToCart(unittest.TestCase):
         print("Test 6  completed")
 
     def test_6_add_mac_book_pro_to_cart(self):
+        # locating the laptops category and adding the desired item to the cart
         self.driver.get("https://www.demoblaze.com/")
         laptops_cat = self.driver.find_element(By.XPATH, "/html/body/div[5]/div/div[1]/div/a[3]")
         laptops_cat.click()
