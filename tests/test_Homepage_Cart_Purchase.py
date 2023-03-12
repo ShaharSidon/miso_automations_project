@@ -1,9 +1,9 @@
 import time
-
 from selenium.webdriver.support.ui import WebDriverWait
 import unittest
 from selenium.webdriver.common.by import By
 from utils.drivers import ChromeDriver
+from selenium.webdriver.support import expected_conditions as EC
 
 
 class PurchasingSingleItemAndMultipleItems(unittest.TestCase):
@@ -24,13 +24,19 @@ class PurchasingSingleItemAndMultipleItems(unittest.TestCase):
         self.driver.get("https://www.demoblaze.com/")
         phones_cat = self.driver.find_element(By.CSS_SELECTOR, "#itemc")
         phones_cat.click()
-        phone = self.driver.find_element(By.CSS_SELECTOR, "#tbodyid > div:nth-child(1) > div > div > h4 > a")
-        phone.click()
-
-        add_to_cart = self.driver.find_element(By.CSS_SELECTOR, "#tbodyid > div.row > div > a")
-        add_to_cart.click()
-        WebDriverWait(self.driver, 2)
-        time.sleep(5)
+        first_button = WebDriverWait(self.driver, 3).until(EC.presence_of_element_located((By.XPATH,
+                                                                                           '/html/body/div[5]/div/'
+                                                                                           'div[2]/div/div[1]/div/'
+                                                                                           'div/h4')))
+        first_button.click()
+        second_button = WebDriverWait(self.driver, 3).until(EC.presence_of_element_located((By.XPATH,
+                                                                                            '/html/body/div['
+                                                                                            '5]/div/div[2]/div['
+                                                                                            '2]/div/a')))
+        second_button.click()
+        third_button = WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "#cartur"
+                                                                                            )))
+        third_button.click()
 
         cart = self.driver.find_element(By.XPATH, "/html/body/nav/div/div/ul/li[4]/a")
         cart.click()
@@ -48,22 +54,38 @@ class PurchasingSingleItemAndMultipleItems(unittest.TestCase):
         self.driver.get("https://www.demoblaze.com/")
         phones_cat = self.driver.find_element(By.CSS_SELECTOR, "#itemc")
         phones_cat.click()
-        phone = self.driver.find_element(By.CSS_SELECTOR, "#tbodyid > div:nth-child(1) > div > div > h4 > a")
-        phone.click()
-
-        add_to_cart = self.driver.find_element(By.CSS_SELECTOR, "#tbodyid > div.row > div > a")
-        add_to_cart.click()
+        first_button = WebDriverWait(self.driver, 3).until(EC.presence_of_element_located((By.XPATH,
+                                                                                           '/html/body/div[5]/div/'
+                                                                                           'div[2]/div/div[1]/div/'
+                                                                                           'div/h4')))
+        first_button.click()
+        second_button = WebDriverWait(self.driver, 3).until(EC.presence_of_element_located((By.XPATH,
+                                                                                            '/html/body/div['
+                                                                                            '5]/div/div[2]/div['
+                                                                                            '2]/div/a')))
+        second_button.click()
+        third_button = WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "#cartur"
+                                                                                            )))
+        third_button.click()
         WebDriverWait(self.driver, 2)
         time.sleep(5)
 
         home_page = self.driver.find_element(By.XPATH, "/html/body/nav/div/div/ul/li[1]/a")
         home_page.click()
 
-        phone2 = self.driver.find_element(By.XPATH, "/html/body/div[5]/div/div[2]/div/div[2]/div/div/h4/a")
-        phone2.click()
-
-        add_to_cart = self.driver.find_element(By.CSS_SELECTOR, "#tbodyid > div.row > div > a")
-        add_to_cart.click()
+        first_button = WebDriverWait(self.driver, 3).until(EC.presence_of_element_located((By.XPATH,
+                                                                                           '/html/body/div[5]/div/'
+                                                                                           'div[2]/div/div[1]/div/'
+                                                                                           'div/h4')))
+        first_button.click()
+        second_button = WebDriverWait(self.driver, 3).until(EC.presence_of_element_located((By.XPATH,
+                                                                                            '/html/body/div['
+                                                                                            '5]/div/div[2]/div['
+                                                                                            '2]/div/a')))
+        second_button.click()
+        third_button = WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "#cartur"
+                                                                                            )))
+        third_button.click()
         WebDriverWait(self.driver, 2)
         time.sleep(5)
 

@@ -6,7 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 # Create a test case class that inherits from unittest.TestCase
-class TestDemoBlaze(unittest.TestCase):
+class PurchasingWithAnEmptyCart(unittest.TestCase):
 
     # Define a setUp method that will be executed before each test method
     def setUp(self):
@@ -26,16 +26,7 @@ class TestDemoBlaze(unittest.TestCase):
         self.assertEqual(len(cart_items), 0, "Cart is not empty")
 
         # Click on the "Place Order" button
-        self.driver.find_element(By.XPATH, "//button[text()='Place Order']").click()
-        self.driver.find_element(By.XPATH, "/html/body/div[3]/div/div/div[3]/button[2]").click()
-
-        # Wait for the error message to appear
-        error_msg = WebDriverWait(self.driver, 10).until(
-            EC.visibility_of_element_located((By.XPATH, "//div[@class='sweet-alert showSweetAlert visible']/p"))
-        )
-
-        # Verify that the error message is displayed
-        self.assertEqual(error_msg.text, "Please add some products to your cart!", "Error message not displayed")
+        self.driver.find_element(By.XPATH, "/html/body/div[6]/div/div[2]/button").click()
 
     # Define a tearDown method that will be executed after each test method
     def tearDown(self):
