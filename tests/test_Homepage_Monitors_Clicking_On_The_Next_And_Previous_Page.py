@@ -3,7 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 
-class ClickTheLaptopsNextAndPreviousPage(unittest.TestCase):
+class ClickTheMonitorsNextAndPreviousPage(unittest.TestCase):
     # Test Suite 49: Clicking the next page button in the monitors section
     def setUp(self):
         self.driver = webdriver.Chrome()
@@ -17,10 +17,7 @@ class ClickTheLaptopsNextAndPreviousPage(unittest.TestCase):
         self.driver.find_element(By.XPATH, "/html/body/div[5]/div/div[1]/div/a[3]").click()
 
         # Verify that we are on the Monitors page
-        laptop_page = self.driver.current_url
-        expected_page = self.driver.find_element(By.XPATH, "/html/body/div[5]/div/div[1]/div/a[4]")
-
-        self.assertIn(expected_page, laptop_page)
+        assert self.driver.current_url == "https://www.demoblaze.com/index.html#"
 
     # Test Suite 50: Clicking the previous page button in the monitors section
 

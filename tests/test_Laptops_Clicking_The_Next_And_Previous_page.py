@@ -17,10 +17,8 @@ class ClickTheLaptopsNextAndPreviousPage(unittest.TestCase):
         self.driver.find_element(By.XPATH, "/html/body/div[5]/div/div[1]/div/a[3]").click()
 
         # Verify that we are on the Laptops page
-        laptop_page = self.driver.current_url
-        expected_page = self.driver.find_element(By.XPATH, "/html/body/div[5]/div/div[1]/div/a[3]")
 
-        self.assertIn(expected_page, laptop_page)
+        assert self.driver.current_url == "https://www.demoblaze.com/index.html#"
 
     def test_previous_laptop_page(self):
         # Click the Laptops category link
