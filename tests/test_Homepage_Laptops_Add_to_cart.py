@@ -5,7 +5,7 @@ from utils.drivers import ChromeDriver
 import time
 
 
-class AddingSonyVaioI5ToCart(unittest.TestCase):
+class AddingLaptopsToCart(unittest.TestCase):
     # TS39- Adding Sony Vaio i5 to cart
 
     def setUp(self):
@@ -17,7 +17,7 @@ class AddingSonyVaioI5ToCart(unittest.TestCase):
 
     def tearDown(self):
         self.driver.quit()
-        print("Test 1  completed")
+        print("All tests  completed")
 
     def test_1_add_sony_vaio_i5_to_cart(self):
         # locating the laptops category and adding the desired item to the cart
@@ -32,19 +32,7 @@ class AddingSonyVaioI5ToCart(unittest.TestCase):
         add_to_cart.click()
         WebDriverWait(self.driver, 2)
 
-
-class AddingSonyVaioI7ToCart(unittest.TestCase):
     # TS40- Adding Sony Vaio i7 to cart
-
-    def setUp(self):
-        tempdriver = ChromeDriver()
-        self.driver = tempdriver.get_chrome_driver()
-        self.driver.implicitly_wait(10)
-        self.driver.maximize_window()
-
-    def tearDown(self):
-        self.driver.quit()
-        print("Test 2  completed")
 
     def test_2_add_sony_vaio_i7_to_cart(self):
         # locating the laptops category and adding the desired item to the cart
@@ -59,19 +47,7 @@ class AddingSonyVaioI7ToCart(unittest.TestCase):
         add_to_cart.click()
         WebDriverWait(self.driver, 2)
 
-
-class AddingMacBookAirToCart(unittest.TestCase):
     # TS41- Adding MacBook Air to cart
-
-    def setUp(self):
-        tempdriver = ChromeDriver()
-        self.driver = tempdriver.get_chrome_driver()
-        self.driver.implicitly_wait(10)
-        self.driver.maximize_window()
-
-    def tearDown(self):
-        self.driver.quit()
-        print("Test 3  completed")
 
     def test_3_add_mac_book_air_to_cart(self):
         # locating the laptops category and adding the desired item to the cart
@@ -86,19 +62,7 @@ class AddingMacBookAirToCart(unittest.TestCase):
         add_to_cart.click()
         WebDriverWait(self.driver, 2)
 
-
-class AddingDellI78GbToCart(unittest.TestCase):
     # TS42- Adding Dell i7 8gb to cart
-
-    def setUp(self):
-        tempdriver = ChromeDriver()
-        self.driver = tempdriver.get_chrome_driver()
-        self.driver.implicitly_wait(10)
-        self.driver.maximize_window()
-
-    def tearDown(self):
-        self.driver.quit()
-        print("Test 4  completed")
 
     def test_4_add_dell_i7_8gb_to_cart(self):
         # locating the laptops category and adding the desired item to the cart
@@ -113,19 +77,7 @@ class AddingDellI78GbToCart(unittest.TestCase):
         add_to_cart.click()
         WebDriverWait(self.driver, 2)
 
-
-class Adding2017DellToCart(unittest.TestCase):
     # TS43- Adding 2017 Dell 15.6 Inch to cart
-
-    def setUp(self):
-        tempdriver = ChromeDriver()
-        self.driver = tempdriver.get_chrome_driver()
-        self.driver.implicitly_wait(10)
-        self.driver.maximize_window()
-
-    def tearDown(self):
-        self.driver.quit()
-        print("Test 5  completed")
 
     def test_5_add_dell_15_6_inch_to_cart(self):
         # locating the laptops category and adding the desired item to the cart
@@ -140,19 +92,7 @@ class Adding2017DellToCart(unittest.TestCase):
         add_to_cart.click()
         WebDriverWait(self.driver, 2)
 
-
-class AddingMacBookProToCart(unittest.TestCase):
     # TS44- Adding MacBookPro to cart
-
-    def setUp(self):
-        tempdriver = ChromeDriver()
-        self.driver = tempdriver.get_chrome_driver()
-        self.driver.implicitly_wait(10)
-        self.driver.maximize_window()
-
-    def tearDown(self):
-        self.driver.quit()
-        print("Test 6  completed")
 
     def test_6_add_mac_book_pro_to_cart(self):
         # locating the laptops category and adding the desired item to the cart
@@ -166,7 +106,3 @@ class AddingMacBookProToCart(unittest.TestCase):
         add_to_cart = self.driver.find_element(By.CSS_SELECTOR, "#tbodyid > div.row > div > a")
         add_to_cart.click()
         WebDriverWait(self.driver, 2)
-
-
-
-

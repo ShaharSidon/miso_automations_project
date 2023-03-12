@@ -3,7 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 
-class ClickTheLaptopsNextPage(unittest.TestCase):
+class ClickTheLaptopsNextAndPreviousPage(unittest.TestCase):
     # TS 46 Clicking the next page button in the laptops section
     def setUp(self):
         self.driver = webdriver.Chrome()
@@ -21,22 +21,6 @@ class ClickTheLaptopsNextPage(unittest.TestCase):
         expected_page = self.driver.find_element(By.XPATH, "/html/body/div[5]/div/div[1]/div/a[3]")
 
         self.assertIn(expected_page, laptop_page)
-        print("Test 1 Failed")
-
-
-if __name__ == '__main__':
-    unittest.main()
-
-
-class TestDemoBlaze(unittest.TestCase):
-    # TS47 clicking the previous page button in the laptops section
-
-    def setUp(self):
-        self.driver = webdriver.Chrome()
-        self.driver.get("https://www.demoblaze.com/index.html")
-
-    def tearDown(self):
-        self.driver.quit()
 
     def test_previous_laptop_page(self):
         # Click the Laptops category link

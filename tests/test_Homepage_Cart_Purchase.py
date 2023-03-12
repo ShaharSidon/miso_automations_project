@@ -6,7 +6,7 @@ from selenium.webdriver.common.by import By
 from utils.drivers import ChromeDriver
 
 
-class PurchasingAnItem(unittest.TestCase):
+class PurchasingSingleItemAndMultipleItems(unittest.TestCase):
     # TS53 verify that a user can purchase an item
 
     def setUp(self):
@@ -17,7 +17,7 @@ class PurchasingAnItem(unittest.TestCase):
 
     def tearDown(self):
         self.driver.quit()
-        print("Test 1 completed")
+        print("All tests completed")
 
     def test_1_purcahse_single_item(self):
         # locating the 'Phones' category, add an item to the cart and purchase
@@ -41,20 +41,7 @@ class PurchasingAnItem(unittest.TestCase):
         purchase = self.driver.find_element(By.XPATH, "/html/body/div[3]/div/div/div[3]/button[2]")
         purchase.click()
 
-
-class PurchasingMultipleItems(unittest.TestCase):
     # TS54 verify that a user can purchase multiple items
-
-    def setUp(self):
-        tempdriver = ChromeDriver()
-        self.driver = tempdriver.get_chrome_driver()
-        self.driver.implicitly_wait(10)
-        self.driver.maximize_window()
-
-    def tearDown(self):
-        # closing the browser window and printing a message
-        self.driver.quit()
-        print("Test 2 completed")
 
     def test_2_purchasing_multiple_items(self):
         # navigating to the site, clicking the 'Phones' category, adding multiple items to the cart purchasing.

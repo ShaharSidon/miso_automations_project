@@ -5,7 +5,7 @@ from utils.drivers import ChromeDriver
 import time
 
 
-class AddingAppleMonitor24ToCart(unittest.TestCase):
+class AddingMonitorsToCart(unittest.TestCase):
     # Test Scenario 48: Adding Apple Monitor 24 to cart
 
     def setUp(self):
@@ -16,7 +16,7 @@ class AddingAppleMonitor24ToCart(unittest.TestCase):
 
     def tearDown(self):
         self.driver.quit()
-        print("Test 1 completed")
+        print("All tests completed")
 
     def test_1_add_apple_monitor_24_to_cart(self):
         # Go to the website
@@ -39,19 +39,7 @@ class AddingAppleMonitor24ToCart(unittest.TestCase):
         # Wait for 2 seconds to ensure the item is added to the cart
         WebDriverWait(self.driver, 2)
 
-
-class AddingAsusFullHdToCart(unittest.TestCase):
     # Test Scenario 49: Adding Asus full HD to cart
-
-    def setUp(self):
-        tempdriver = ChromeDriver()
-        self.driver = tempdriver.get_chrome_driver()
-        self.driver.implicitly_wait(10)
-        self.driver.maximize_window()
-
-    def tearDown(self):
-        self.driver.quit()
-        print("Test 2 completed")
 
     def test_2_add_asus_full_hd_to_cart(self):
         # Go to the website
