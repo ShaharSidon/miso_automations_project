@@ -2,7 +2,7 @@ import unittest
 from selenium.webdriver.chrome.service import Service
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from utils.drivers import ChromeDriver
+from src.utils.drivers import ChromeDriver
 
 class TestQuantityChange(unittest.TestCase):
     # setting up driver

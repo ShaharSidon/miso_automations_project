@@ -1,6 +1,6 @@
 # importing the necessary libraries
 import unittest
-from utils.drivers import ChromeDriver
+from src.utils.drivers import ChromeDriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC

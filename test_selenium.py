@@ -4,13 +4,13 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from utils.drivers import ChromeDriver
+from src.utils.drivers import ChromeDriver
 
 
 class TestOrangeHrmLoginPage(unittest.TestCase):
     def setUp(self):
         try:
-            chromedriver_path = "./utils/chromedriver.exe"
+            chromedriver_path = "src/utils/chromedriver.exe"
             self.service = Service(executable_path=chromedriver_path)
             chrome_options = webdriver.ChromeOptions()
             chrome_options.add_argument("--disable-extensions")
