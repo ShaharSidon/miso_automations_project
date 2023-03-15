@@ -1,8 +1,8 @@
 import unittest
 from selenium.webdriver.chrome.service import Service
 from selenium import webdriver
-from utils.drivers import ChromeDriver
-from utils.Website_Link import Website_Link
+from src.utils.drivers import ChromeDriver
+from src.utils import Website_Link
 
 # defining testcase class
 class TestDemoBlazeWebsiteLink(unittest.TestCase):
